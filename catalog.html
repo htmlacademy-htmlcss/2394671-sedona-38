@@ -10,21 +10,21 @@
       <nav class="main-navigation">
         <ul class="navigation-list">
           <li>
-            <a href="" class="active">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li>
             <a href="#">О Седоне</a>
           </li>
           <li>
-            <a href="catalog.html">Гостиницы</a>
+            <a class="active">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user">
           <li>
-           <button class="visually-hidden" type="button">Поиск</button>
+           <button type="button"><span class="visually-hidden">Поиск</span></button>
           </li>
           <li>
-            <button class="visually-hidden" type="button">Лайк</button>
+            <button type="button"><span class="visually-hidden">Лайк</span></button>
           </li>
         </ul>
         <a class="nav-button" href="#">Хочу сюда!</a>
@@ -33,7 +33,16 @@
     <main class="hostels" data-test="main">
       <section class="filter" data-test=" filter">
         <h1>Гостиницы Седоны</h1>
-        <a href="#">Гостиницы</a>
+        <header class="breadcrumbs-header">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Гостиницы</a>
+            </li>
+          </ul>
+        </header>
         <form>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -63,19 +72,19 @@
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="hostel" value="hostel" checked>
+                <input class="control-input" type="radio" name="living-space" value="hostel" checked>
                 Гостиница
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="motel" value="motel">
+                <input class="control-input" type="radio" name="living-space" value="motel">
                 Мотель
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="apartments" value="apartments">
+                <input class="control-input" type="radio" name="living-space" value="apartments">
                 Апартаменты
               </label>
             </li>
@@ -85,27 +94,29 @@
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
           <label class="control">
             От
-            <input class="control-input" type="text" value="0">
+            <input class="control-input" type="number" value="0">
           </label>
           <label class="control">
             До
-            <input class="control-input" type="text" value="9000">
+            <input class="control-input" type="number" value="9000">
           </label>
           <button class="slider" type="button"></button>
           <button class="slider" type="button"></button>
         </fieldset>
         <button class="button-blue" type="submit">Применить</button>
-        <button class="button" type="button">Сбросить</button>
+        <button class="button-clear" type="reset">Сбросить</button>
       </form>
       </section>
-      <section>
+      <section class="hostel-info">
         <h2 class="visually-hidden">Список гостиниц</h2>
-        <p><b>Найдено гостиниц: 38</b></p>
+        <b class="hostel-quantity">Найдено гостиниц: 38</b>
         <select class="sorting">
           <option class="sorting-item">Сначала дешевые</option>
+          <option class="sorting-item">Сначала дорогие</option>
+          <option class="sorting-item">Сначала популярные</option>
         </select>
-        <ul class="postiton-list">
-          <li class="position-item">
+        <ul class="posititon-list">
+          <li class="poisition-item">
             <a class="button button-active" href="#"><span class="visually-hidden">Показать карточки</span></a>
           </li>
           <li class="position-item">
@@ -122,7 +133,7 @@
             <p>Гостиница</p>
             <p>От 4000 ₽</p>
             <a class="button-brown" href="#">подробнее</a>
-            <a class="button" href="#">в избранное</a>
+            <button class="button-blue" type="button">в избранное</button>
             <p>Рейтинг: 8,5</p>
           </li>
           <li class="hotel-item">
@@ -131,7 +142,7 @@
             <p>Гостиница</p>
             <p>От 5000 ₽</p>
             <a class="button-brown" href="#">подробнее</a>
-            <a class="button button-green" href="#">в избранном</a>
+            <button class="button-green" type="button">в избранном</button>
             <p>Рейтинг: 9,2</p>
           </li>
           <li class="hotel-item">
@@ -140,7 +151,7 @@
             <p>Гостиница</p>
             <p>От 2500 ₽</p>
             <a class="button-brown" href="#">подробнее</a>
-            <a class="button" href="#">в избранное</a>
+            <button class="button-blue" type="button">в избранное</button>
             <p>Рейтинг: 6,9</p>
           </li>
           <li class="hotel-item">
@@ -149,7 +160,7 @@
             <p>Гостиница</p>
             <p>От 1500 ₽</p>
             <a class="button-brown" href="#">подробнее</a>
-            <a class="button" href="#">в избранное</a>
+            <button class="button-blue" type="button">в избранное</button>
             <p>Рейтинг: 5,0</p>
           </li>
         </ul>
@@ -186,19 +197,15 @@
     <footer class="main-footer" data-test="footer">
       <ul class="footer-nav">
         <li>
-          <a href="https://vk.com/htmlacademy">
-            <img src="#" alt="Вконтакте">
-          </a>
-        </li>
-        <li>
-          <a href="https://t.me/htmlacademy ">
-            <img src="#" alt="Телеграм">
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <img src="#" alt="Ютуб">
-          </a>
+          <li>
+            <a href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li>
+            <a href="https://t.me/htmlacademy "><span class="visually-hidden">Телеграм</span></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+          </li>
         </li>
       </ul>
       <a href="tel:+78128121212">+7 (812) 812-12-12</a>
