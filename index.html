@@ -10,7 +10,7 @@
       <nav class="main-navigation">
         <ul class="navigation-list">
           <li>
-            <a href="" class="active">Главная</a>
+            <a class="active">Главная</a>
           </li>
           <li>
             <a href="#">О Седоне</a>
@@ -21,10 +21,10 @@
         </ul>
         <ul class="navigation-user">
           <li>
-           <button class="visually-hidden" type="button">Поиск</button>
+           <button type="button"><span class="visually-hidden">Поиск</span></button>
           </li>
           <li>
-            <button class="visually-hidden" type="button">Лайк</button>
+            <button type="button"><span class="visually-hidden">Лайк</span></button>
           </li>
         </ul>
         <a class="nav-button" href="#">Хочу сюда!</a>
@@ -36,11 +36,10 @@
         <img src="#" alt="Горная местность рядом с городом Седона">
       </section>
       <section class="advantages" data-test="advantages">
-        <h2 class="visually-hidden">Преимущества города Седона</h2>
-        <div>
-          <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <div class="background-white">
+          <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </div>
+        </divс>
         <ul class="advantages-recreation">
           <li class="advantages-recreation-item">
             <h3>Настоящий городок</h3>
@@ -65,11 +64,13 @@
             <img src="#" alt="Просторный Каньон">
           </li>
         </ul>
-        <div>
-          <p>Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+      </section>
+      <section class="advantages-comfort">
+        <div class="background-white">
+          <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
           <p>Опытный персонал и качественное обслуживание!</p>
         </div>
-        <ul class="advantages-comfort">
+        <ul class="advantages-comfort-lsit">
           <li class="advantages-comfort-item">
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -90,8 +91,7 @@
         <a class="search-hotel" href="#"><h2>Поиск Гостиницы в седоне</h2></a>
       </section>
       <section class="subcribe" data-test="subscribe">
-        <h2 Class="visually-hidden">Подписка на рассылку</h2>
-        <p><b>Подпишитесь на рассылку</b></p>
+        <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subcribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="email" placeholder="Ваш e-mail">
@@ -102,19 +102,13 @@
     <footer class="main-footer" data-test="footer">
       <ul class="footer-nav">
         <li>
-          <a href="https://vk.com/htmlacademy">
-            <img src="#" alt="Вконтакте">
-          </a>
+          <a href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span></a>
         </li>
         <li>
-          <a href="https://t.me/htmlacademy ">
-            <img src="#" alt="Телеграм">
-          </a>
+          <a href="https://t.me/htmlacademy "><span class="visually-hidden">Телеграм</span></a>
         </li>
         <li>
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <img src="#" alt="Ютуб">
-          </a>
+          <a href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
         </li>
       </ul>
       <a href="tel:+78128121212">+7 (812) 812-12-12</a>
