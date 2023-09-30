@@ -21,10 +21,10 @@
         </ul>
         <ul class="navigation-user">
           <li>
-           <button type="button"><span class="visually-hidden">Поиск</span></button>
+           <a class="search-item"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li>
-            <button type="button"><span class="visually-hidden">Лайк</span></button>
+            <a class="favorites"><span class="visually-hidden">Лайк</span></a>
           </li>
         </ul>
         <a class="nav-button" href="#">Хочу сюда!</a>
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </header>
-        <form>
+        <form class="sort-form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
@@ -94,11 +94,11 @@
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
           <label class="control">
             От
-            <input class="control-input" type="number" value="0">
+            <input class="control-input" type="number" name="min-cost" value="0">
           </label>
           <label class="control">
             До
-            <input class="control-input" type="number" value="9000">
+            <input class="control-input" type="number" name="max-cost" value="9000">
           </label>
           <button class="slider" type="button"></button>
           <button class="slider" type="button"></button>
@@ -108,6 +108,7 @@
       </form>
       </section>
       <section class="hostel-info">
+				<header class="header-hotel">
         <h2 class="visually-hidden">Список гостиниц</h2>
         <b class="hostel-quantity">Найдено гостиниц: 38</b>
         <select class="sorting">
@@ -120,12 +121,13 @@
             <a class="button button-active" href="#"><span class="visually-hidden">Показать карточки</span></a>
           </li>
           <li class="position-item">
-            <a class="button" href="#"><span class="visually-hidden">Показать</span></a>
+            <a class="button" href="#"><span class="visually-hidden">Показать Слайд</span></a>
           </li>
           <li class="position-item">
             <a class="button" href="#"><span class="visually-hidden">Показать Список</span></a>
           </li>
         </ul>
+				</header>
         <ul class="hostel-list">
           <li class="hotel-item">
             <a href="#"><img src="#" alt="видно звездное небо сквозь горы"></a>
