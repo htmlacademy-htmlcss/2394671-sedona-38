@@ -15,10 +15,15 @@
 }
 
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #F2F2F2;;
+}
+
+.main-header {
+  background-color: #FFFFFF;
 }
 
 .navigation-list-item a {
@@ -27,10 +32,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #000000;
-}
-
-.button-favorite {
-  background-image: url(/images/search-item.svg);
 }
 
 .nav-button {
@@ -43,4 +44,139 @@ body {
   background-color: #756157;
   padding: 8px 34px;
   border-radius: 5px;
+}
+
+.hero {
+  background-color: #2A373D;
+  background-image: url(/images/hero-pattern.svg), url(/images/hero-image.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  text-align: center;
+}
+
+/*Есть ли необходимость выстраивать автоматом размеры у фонового изображения?
+На макете есть тень, и отдельный цвет сайта background-color: #F2F2F2;. Если
+все правильно понял, то по макету не предполагается что фоновая картинка с горами
+у блока hero будет растягиваться в зависимости от формата экрана у пользователя.*/
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.hero img {
+  margin-top: 51px;
+  margin-bottom: 81px;
+}
+
+.advantages {
+  background-color: #FFFFFF;
+}
+
+.titel-two {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle-two {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.title-three {
+  color: #000000;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages-recreation-item p {
+  text-align: center;
+}
+
+.alternative-style-blue {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.alternative-title-color {
+  color: #FFFFFF;
+}
+
+.alternative-style-grey {
+  background-color: #F0F5F9;
+}
+
+.alternative-style-dark-grey {
+  background-color: #E6F0F6;
+}
+
+.advantages-comfort {
+  background-color: #FFFFFF;
+}
+
+.advantages-comfort-item p {
+  text-align: center;
+}
+
+.search {
+  background-color: #FFFFFF;
+}
+
+.search-hotel {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #756157;
+  padding: 8px 50px;
+  border-radius: 5px;
+}
+
+.subcribe {
+  background-color: #96ABB9;
+  background-image: url(/images/Background-subcribe.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.subcribe-form {
+  text-align: center;
+}
+
+.button-subcribe {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  padding: 8px 50px;
+}
+
+/*почему у кнопки есть обводка как border? как ее убрать?*/
+
+.main-footer {
+  background-color: #FFFFFF;
+}
+
+.address-footer {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.address-footer a {
+  text-decoration: none;
+  font-style: normal;
+  color: #000000;
 }
