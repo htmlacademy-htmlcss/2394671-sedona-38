@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   src: url(/fonts/ptsans-400.woff2) format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
   src: url(/fonts/ptsans-700.woff2) format("woff2");
@@ -42,8 +42,6 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
-  padding: 8px 34px;
-  border-radius: 5px;
 }
 
 .hero {
@@ -73,7 +71,7 @@ body {
   background-color: #FFFFFF;
 }
 
-.titel-two {
+.title-two {
   color: #000000;
   font-size: 30px;
   font-weight: 700;
@@ -137,22 +135,20 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
-  padding: 8px 50px;
-  border-radius: 5px;
 }
 
-.subcribe {
+.subscribe {
   background-color: #96ABB9;
-  background-image: url(/images/Background-subcribe.jpg);
+  background-image: url(/images/Background-subscribe.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
-.subcribe-form {
+.subscribe-form {
   text-align: center;
 }
 
-.button-subcribe {
+.button-subscribe {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -160,10 +156,9 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #82B3D3;
-  padding: 8px 50px;
 }
 
-/*почему у кнопки есть обводка как border? как ее убрать?*/
+/*почему у кнопки есть обводка как у border? как ее убрать?*/
 
 .main-footer {
   background-color: #FFFFFF;
@@ -179,4 +174,146 @@ body {
   text-decoration: none;
   font-style: normal;
   color: #000000;
+}
+
+/* Catalog*/
+
+.filter {
+  background-color: #2B3E45;
+  background-image: url(/images/backgeound-filter.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #FFFFFF;
+}
+
+.filter h1 {
+  font-size: 60px;
+  color: #FFFFFF;
+  line-height: 78px;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color:#FFFFFF;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-filter-item {
+  line-height: 23px;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+  padding: 8px 50px;
+  color:#FFFFFF;
+  border-radius: 5px;
+}
+
+.button-clear {
+  padding: 8px 50px;
+  background-color: transparent;
+  color:#FFFFFF
+}
+
+.control-input {
+  font-family: "PT Sans", sans-serif;
+  color: #000000;
+  font-weight: 700;
+}
+
+.control-range {
+  opacity: 0.3;
+}
+
+.hostel-info {
+  background: #FFF;
+}
+
+.hotel-item-title {
+  font-size: 24px;
+  line-height: 28px;
+  color:#000000
+}
+
+.hotel-item-link {
+  text-decoration: none;
+}
+
+.button-green {
+  background-color: #7DB54F ;
+}
+
+.hotel-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+.stars {
+  background-image: url(/images/star.svg);
+  background-repeat: space;
+  width: 20px;
+  height: 20px;
+}
+
+.stars-2 {
+  background-image: url(/images/star.svg);
+  background-repeat: space;
+  width: 40px;
+  height: 20px;
+}
+
+.stars-3 {
+  background-image: url(/images/star.svg);
+  background-repeat: space;
+  width: 60px;
+  height: 20px;
+}
+
+.stars-4 {
+  background-image: url(/images/star.svg);
+  background-repeat: space;
+  width: 80px;
+  height: 20px;
+}
+
+.stars-5 {
+  background-image: url(/images/star.svg);
+  background-repeat: space;
+  width: 100px;
+  height: 20px;
+}
+
+.pagination-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.pagination-active-link {
+  color:#000000;
+  background-color: #F2F2F2;
+}
+
+.emptiness-link {
+  color:#000000;
+  background-color: transparent;
+}
+
+.subscribe-catalog {
+  background-color: #FFFFFF;
 }
