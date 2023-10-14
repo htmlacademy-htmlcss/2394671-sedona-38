@@ -38,7 +38,9 @@ body {
 }
 
 .logo img {
-  margin-bottom: -10px;
+  margin-bottom: -6px;
+  position: relative;
+  z-index: 2;
 }
 
 /*1 вопрос*/
@@ -55,7 +57,7 @@ body {
   display: flex;
   list-style: none;
   margin-right: auto;
-  justify-content: space-between;
+  column-gap: 32px;
 }
 
 .navigation-user {
@@ -94,7 +96,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #000000;
-  padding: 20px 16px;
 }
 
 .button {
@@ -143,7 +144,8 @@ body {
 }
 
 .button-filter-size {
-  padding: 8px 50px;
+  width: 191px;
+  padding: 8px 0;
   border-radius: 4px;
 }
 
@@ -173,6 +175,8 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   text-align: center;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .advantages {
@@ -215,8 +219,9 @@ body {
 }
 
 .hero img {
-  margin-top: 51px;
-  margin-bottom: 81px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title-two {
@@ -371,12 +376,15 @@ body {
 
 .subscribe {
   background-color: #96abb9;
-  background-image: url("../images/background-subscribe.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   color: #ffffff;
   padding-top: 96px;
   padding-bottom: 104px;
+}
+
+.subscribe-main {
+  background-image: url("../images/background-subscribe.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .subscribe .title-two {
@@ -460,12 +468,9 @@ body {
   text-decoration: none;
   font-style: normal;
   color: #000000;
-  display: flex;
 }
 
-.logo-footer img {
-  align-self: center;
-}
+/*8 вопрос*/
 
 /* Catalog*/
 
@@ -475,13 +480,29 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   color: #ffffff;
+  padding: 35px 70px 70px 70px;
 }
 
 .filter h1 {
   font-size: 60px;
   color: #ffffff;
   line-height: 78px;
+  margin: 0;
 }
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumbs-main-image {
+  background-image: url("../images/breadcrumbs-main-image.svg");
+  display: block;
+  width: 12px;
+  height: 13px;
+  margin-top: auto;
+}
+
+/*Вопрос10*/
 
 .breadcrumbs-item {
   font-size: 16px;
@@ -493,10 +514,34 @@ body {
   color: #ffffff;
 }
 
+.sort-form {
+  display: flex;
+}
+
+.catalog-filter-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-form-column {
+  display: flex;
+  column-gap: 70px;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .catalog-filter-item {
@@ -509,7 +554,10 @@ body {
   font-weight: 700;
   border: none;
   padding: 12px 20px;
-  width: 103px;
+}
+
+.button-sort-column {
+  width: 191px;
 }
 
 .control-input-left {
@@ -529,13 +577,81 @@ body {
   font-size: 18px;
   line-height: 21px;
   padding: 14px 20px;
-  width: 252px;
+  width: 292px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  margin-left: auto;
 }
 
 .hostel-info {
   background: #ffffff;
+  padding: 50px 70px 60px 70px;
+}
+
+.header-hotel {
+  display: flex;
+}
+
+.hostel-quantity {
+  align-self: center;
+}
+
+.position-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-left: 70px;
+}
+
+.card-position-button {
+  display: block;
+  width: 16px;
+  height: 14px;
+  padding: 14px 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.card-position-card {
+  background-image: url("../images/card-position/card-position-card.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-position-slide {
+  background-image: url("../images/card-position/card-position-slide.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-position-list {
+  background-image: url("../images/card-position/card-position-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hostel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 40px;
+}
+
+.hotel-item {
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  width: 340px;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .hotel-item-title {
@@ -593,6 +709,14 @@ body {
   height: 17px;
 }
 
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 8px;
+}
+
 .pagination-link {
   font-size: 20px;
   font-weight: 700;
@@ -630,4 +754,9 @@ body {
 
 .subscribe-catalog {
   background-color: #ffffff;
+  color: #333333;
+}
+
+.subscribe-catalog .title-two {
+  color: #000000;
 }
