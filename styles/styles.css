@@ -30,7 +30,8 @@ body {
 
 .main-header {
   display: flex;
-  padding: 0 70px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .logo {
@@ -38,12 +39,9 @@ body {
 }
 
 .logo img {
-  margin-bottom: -6px;
   position: relative;
-  z-index: 2;
+  margin-bottom: -10px;
 }
-
-/*1 вопрос*/
 
 .main-navigation {
   flex-grow: 1;
@@ -57,7 +55,7 @@ body {
   display: flex;
   list-style: none;
   margin-right: auto;
-  column-gap: 32px;
+  flex-wrap: wrap;
 }
 
 .navigation-user {
@@ -66,19 +64,6 @@ body {
   padding: 0;
   display: flex;
 }
-
-/*
-2 вопрос
-
-.navigation-user button {
-  padding: 22px 12px;
-}
-
-.navigation-user li {
-  padding: 12px 22px;
-}
-
-*/
 
 .main-page-container {
   width: 1200px;
@@ -90,12 +75,17 @@ body {
   flex-direction: column;
 }
 
+.navigation-list-item {
+  padding: 0 16px;
+}
+
 .navigation-list-item a {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
   color: #000000;
+  padding: 20px 0;
 }
 
 .button {
@@ -143,10 +133,20 @@ body {
   border-bottom-right-radius: 4px;
 }
 
-.button-filter-size {
+.button-filter-submit {
   width: 191px;
   padding: 8px 0;
   border-radius: 4px;
+  margin: 0;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+
+.button-filter-reset {
+  width: 191px;
+  padding: 8px 0;
+  border-radius: 4px;
+  margin: 0;
 }
 
 .button-more-size {
@@ -171,7 +171,7 @@ body {
 .hero {
   background-color: #2a373d;
   background-image: url("../images/hero-pattern.svg"), url("../images/hero-image.jpg");
-  background-size: cover;
+  background-size: 100%, cover;
   background-repeat: no-repeat;
   background-position: bottom;
   text-align: center;
@@ -247,20 +247,19 @@ body {
   text-align: center;
 }
 
-.advantages-recreation-item h3 {
-  margin: 0;
-  width: 175px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+.card-size {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.advantages-recreation-item p {
-  width: 230px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+.advantages-recreation-item h3 {
+  padding-top: 30px;
+  margin: 0;
+  width: 175px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .alternative-style-blue {
@@ -270,6 +269,13 @@ body {
 
 .alternative-style-blue h3 {
   color: #ffffff;
+}
+
+.advantages-recreation-item p {
+  text-align: center;
+  width: 230px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 .alternative-style-grey {
@@ -282,6 +288,7 @@ body {
 
 .advantages-recreation-item {
   width: 400px;
+  min-height: 385px;
 }
 
 .advantages-recreation-item:first-child,
@@ -290,8 +297,18 @@ body {
   width: 1200px;
 }
 
+.advantages-recreation-item img {
+  max-width: 800px;
+  height: 100%;
+  object-fit: cover;
+}
+
 .image-column {
-  flex-grow: 1;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .advantages-comfort {
@@ -322,14 +339,17 @@ body {
 
 .advantages-comfort-item {
   width: 400px;
+  min-height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .advantages-comfort-item .title-three {
   width: 230px;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
+  margin-top: 183px;
 }
 
 .advantages-comfort-item p {
@@ -427,6 +447,7 @@ body {
   width: 1060px;
   padding-top: 40px;
   padding-bottom: 30px;
+  align-items: center;
 }
 
 .footer-nav {
@@ -470,8 +491,6 @@ body {
   color: #000000;
 }
 
-/*8 вопрос*/
-
 /* Catalog*/
 
 .filter {
@@ -488,10 +507,16 @@ body {
   color: #ffffff;
   line-height: 78px;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs {
   display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-main-image {
@@ -502,11 +527,10 @@ body {
   margin-top: auto;
 }
 
-/*Вопрос10*/
-
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
+  margin-right: 20px;
 }
 
 .breadcrumbs-link {
@@ -520,13 +544,10 @@ body {
 
 .catalog-filter-group {
   border: none;
+  width: 150px;
   padding: 0;
   margin: 0;
-}
-
-.sort-form-column {
-  display: flex;
-  column-gap: 70px;
+  margin-right: 70px;
 }
 
 .catalog-filter-title {
@@ -546,6 +567,21 @@ body {
 
 .catalog-filter-item {
   line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.catalog-filter-slider {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 288px;
+  margin-left: auto;
 }
 
 .control-input {
@@ -553,15 +589,20 @@ body {
   color: #000000;
   font-weight: 700;
   border: none;
+  box-sizing: border-box;
   padding: 12px 20px;
+  width: 143px;
 }
 
 .button-sort-column {
+  display: block;
   width: 191px;
+  margin-left: 70px;
 }
 
 .control-input-left {
   border-radius: 4px 0 0 4px;
+  margin-right: 2px;
 }
 
 .control-input-right {
@@ -570,6 +611,10 @@ body {
 
 .control-range {
   opacity: 0.3;
+  color: #000000;
+  position: absolute;
+  margin-left: 110px;
+  margin-top: 15px;
 }
 
 .sorting {
