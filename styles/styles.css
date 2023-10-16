@@ -116,26 +116,31 @@ body {
 }
 
 .button-nav-size {
-  padding: 8px 34px;
+  width: 140px;
+  padding: 8px 10px;
+  text-align: center;
   border-radius: 4px;
 }
 
 .button-search-size {
-  padding: 8px 50px;
+  width: 355px;
+  text-align: center;
+  padding: 8px 10px;
   border-radius: 4px;
 }
 
 .button-subscribe-size {
-  padding: 8px 50px;
+  width: 212px;
   line-height: 36px;
   font-size: 20px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  padding: 8px 10px;
 }
 
 .button-filter-submit {
   width: 191px;
-  padding: 8px 0;
+  padding: 8px 10px;
   border-radius: 4px;
   margin: 0;
   margin-top: 56px;
@@ -144,23 +149,28 @@ body {
 
 .button-filter-reset {
   width: 191px;
-  padding: 8px 0;
+  padding: 8px 10px;
   border-radius: 4px;
   margin: 0;
 }
 
 .button-more-size {
-  padding: 8px 26px;
+  display: block;
+  width: 120px;
+  text-align: center;
+  padding: 8px 10px;
   border-radius: 4px;
 }
 
 .button-favorite-size {
-  padding: 8px 26px;
+  width: 140px;
+  padding: 8px 10px;
   border-radius: 4px;
 }
 
 .button-selected-size {
-  padding: 8px 18px;
+  width: 140px;
+  padding: 8px 10px;
   border-radius: 4px;
 }
 
@@ -388,7 +398,6 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #756157;
-  width: 276px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -404,7 +413,7 @@ body {
 .subscribe-main {
   background-image: url("../images/background-subscribe.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .subscribe .title-two {
@@ -714,8 +723,9 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  display: inline-block;
-  padding: 9px 22px 8px 23px;
+  text-align: center;
+  width: 120px;
+  padding: 8px 10px;
   border-radius: 5px;
 }
 
@@ -770,10 +780,11 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   display: inline-block;
-  width: 60px;
-  height: 36px;
+  min-width: 60px;
+  height: 60px;
   text-align: center;
-  padding: 12px 0;
+  padding: 12px 5px;
+  box-sizing: border-box;
 }
 
 .pagination-size-number {
