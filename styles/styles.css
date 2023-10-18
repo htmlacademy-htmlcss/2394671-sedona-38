@@ -65,6 +65,11 @@ body {
   display: flex;
 }
 
+.navigation-user li {
+  min-width: 20px;
+  min-height: 20px;
+}
+
 .main-page-container {
   width: 1200px;
   margin: 0 auto;
@@ -305,6 +310,10 @@ body {
 .advantages-recreation-item:last-child {
   display: flex;
   width: 1200px;
+}
+
+.advantages-recreation-item-order img {
+  order: -1;
 }
 
 .advantages-recreation-item img {
