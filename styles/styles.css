@@ -60,14 +60,30 @@ body {
 
 .navigation-user {
   list-style: none;
+  margin: 0;
   margin-right: 20px;
   padding: 0;
   display: flex;
 }
 
-.navigation-user li {
-  min-width: 20px;
-  min-height: 20px;
+
+.button-nav-user {
+  width: 44px;
+  height: 64px;
+  background-color: #ffffff;
+  border: none;
+  background-repeat: no-repeat;
+  padding: 22px 12px;
+  background-position: center;
+  margin: 0;
+}
+
+.button-favorite {
+  background-image: url("../images/button-favorite.svg");
+}
+
+.button-search {
+  background-image: url("../images/button-search.svg");
 }
 
 .main-page-container {
@@ -700,13 +716,13 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 .hotel-item {
@@ -715,16 +731,40 @@ body {
   width: 340px;
   box-sizing: border-box;
   border-radius: 4px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 212px 1fr;
+  gap: 16px 20px;
+}
+
+.hotel-item-image-link {
+  grid-column: 1 / 3;
+}
+
+.hotel-item-image {
+  vertical-align: bottom;
 }
 
 .hotel-item-title {
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+  margin: 0;
+  margin-bottom: auto;
 }
 
 .hotel-item-link {
   text-decoration: none;
+  grid-column: 1 / 3;
+}
+
+.hotel-type {
+  margin: 0;
+}
+
+.hotel-price {
+  margin: 0;
+  justify-self: end;
 }
 
 .hotel-rating {
@@ -733,6 +773,7 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
   text-align: center;
+  margin: 0;
   width: 120px;
   padding: 8px 10px;
   border-radius: 5px;
@@ -743,6 +784,8 @@ body {
   background-repeat: space;
   width: 18px;
   height: 17px;
+  margin: 0;
+  align-self: center;
 }
 
 .stars-2 {
@@ -793,7 +836,19 @@ body {
   height: 60px;
   text-align: center;
   padding: 12px 5px;
+  border: 1px solid transparent;
   box-sizing: border-box;
+}
+
+.pagination-item-hover:hover,
+.pagination-item-hover:focus {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+  box-sizing: border-box;
+}
+
+.pagination-item-hover:active {
+  opacity: 0.7;
 }
 
 .pagination-size-number {
