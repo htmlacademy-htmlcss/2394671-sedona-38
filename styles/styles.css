@@ -733,7 +733,7 @@ body {
   border-radius: 4px;
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: auto 1fr auto 36px 36px;
+  grid-template-rows: 212px 1fr;
   gap: 16px 20px;
 }
 
@@ -836,7 +836,19 @@ body {
   height: 60px;
   text-align: center;
   padding: 12px 5px;
+  border: 1px solid transparent;
   box-sizing: border-box;
+}
+
+.pagination-item-hover:hover,
+.pagination-item-hover:focus {
+  background-color: #68a2ca;
+  border: 1px solid #82b3d3;
+  box-sizing: border-box;
+}
+
+.pagination-item-hover:active {
+  opacity: 0.7;
 }
 
 .pagination-size-number {
