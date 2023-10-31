@@ -731,7 +731,7 @@ body {
 .breadcrumbs-main-image {
   background-image: url("../images/breadcrumbs-main-image.svg");
   display: block;
-  width: 12px;
+  width: 13px;
   height: 13px;
   margin-top: auto;
 }
@@ -739,11 +739,59 @@ body {
 .breadcrumbs-item {
   font-size: 16px;
   line-height: 21px;
-  margin-right: 20px;
+  margin-right: 28px;
+  position: relative;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  background-image: url("../images/arrow-crumbs.svg");
+  position: absolute;
+  height: 10px;
+  width: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .breadcrumbs-link {
   text-decoration: none;
+  color: #ffffff;
+}
+
+.breadcrumbs-item:not(:last-of-type) .breadcrumbs-link {
+  cursor: pointer;
+}
+
+.breadcrumbs-item:last-of-type {
+  cursor: default;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item:last-of-type a:hover,
+.breadcrumbs-item:last-of-type a:focus,
+.breadcrumbs-item:last-of-type a:active {
   color: #ffffff;
 }
 
@@ -818,12 +866,16 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.control {
+  position: relative;
+}
+
 .control-range {
   opacity: 0.3;
   color: #000000;
   position: absolute;
-  margin-left: 110px;
-  margin-top: 15px;
+  right: 20px;
+  top: 12px;
 }
 
 .sorting {
@@ -867,6 +919,23 @@ body {
   padding: 14px 12px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.card-position-button:hover {
+  border: 2px solid #000000;
+}
+
+.card-position-button:focus {
+  border: 2px solid #68a2ca;
+  outline: none;
+}
+
+.card-position-button:active {
+  border: 2px solid #000000;
+}
+
+.card-position-button-active {
+  border: 2px solid #000000;
 }
 
 .card-position-card {
