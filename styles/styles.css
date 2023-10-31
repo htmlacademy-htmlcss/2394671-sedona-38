@@ -246,7 +246,7 @@ body {
 }
 
 .button-subscribe-size {
-  width: 212px;
+  width: 232px;
   line-height: 36px;
   font-size: 20px;
   border-top-right-radius: 4px;
@@ -604,7 +604,6 @@ body {
 .subscribe-form {
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 
 .input-subscribe-size {
@@ -685,6 +684,11 @@ body {
 
 .address-footer a:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
 }
 
 .logo-footer-academy {
