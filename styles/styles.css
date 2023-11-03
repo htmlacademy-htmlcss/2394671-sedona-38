@@ -166,7 +166,7 @@ body {
 }
 
 .button-brown:hover,
-.button-brown:focus {
+.button-brown:focus-visible {
   background-color: #615048;
 }
 
@@ -187,7 +187,7 @@ body {
 }
 
 .button-blue:hover,
-.button-blue:focus {
+.button-blue:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -201,7 +201,7 @@ body {
 }
 
 .button-green:hover,
-.button-green:focus {
+.button-green:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -218,7 +218,7 @@ body {
   opacity: 0.6;
 }
 
-.button-clear:focus {
+.button-clear:focus-visible {
   outline: 3px solid #83b3d3;
 }
 
@@ -651,9 +651,9 @@ body {
 .footer-nav-item-link:hover .telegram,
 .footer-nav-item-link:hover .youtube,
 .footer-nav-item-link:hover .vkontakte,
-.footer-nav-item-link:focus .telegram,
-.footer-nav-item-link:focus .youtube,
-.footer-nav-item-link:focus .vkontakte {
+.footer-nav-item-link:focus-visible .telegram,
+.footer-nav-item-link:focus-visible .youtube,
+.footer-nav-item-link:focus-visible .vkontakte {
   fill: #68a2ca;
 }
 
@@ -669,6 +669,8 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .address-footer a {
@@ -678,7 +680,7 @@ body {
 }
 
 .address-footer a:hover,
-.address-footer a:focus {
+.address-footer a:focus-visible {
   color: #756157;
 }
 
@@ -696,7 +698,7 @@ body {
 }
 
 .logo-footer:hover .logo-footer-academy,
-.logo-footer:focus .logo-footer-academy {
+.logo-footer:focus-visible .logo-footer-academy {
   fill: #756157;
 }
 
@@ -738,6 +740,10 @@ body {
   width: 13px;
   height: 13px;
   margin-top: auto;
+}
+
+.breadcrumbs-main-image:hover {
+  opacity: 0.7;
 }
 
 .breadcrumbs-item {
@@ -785,7 +791,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:focus {
+.breadcrumbs-link:focus-visible {
   color: #ffffff;
 }
 
@@ -794,7 +800,7 @@ body {
 }
 
 .breadcrumbs-item:last-of-type a:hover,
-.breadcrumbs-item:last-of-type a:focus,
+.breadcrumbs-item:last-of-type a:focus-visible,
 .breadcrumbs-item:last-of-type a:active {
   color: #ffffff;
 }
@@ -874,6 +880,61 @@ body {
   position: relative;
 }
 
+.control-label {
+  padding-left: 36px;
+  display: block;
+}
+
+.control-label:hover .custom-input-check,
+.control-label:hover .catalog-input-name {
+  opacity: 0.6;
+}
+
+.control-input-check:focus-visible + .custom-input-check {
+  outline: 3px solid #83b3d3;
+}
+
+.control-label:active {
+  opacity: 0.3;
+}
+
+.control-input-check {
+  appearance: none;
+  display: block;
+}
+
+.control-input-check[type="checkbox"]:checked + .custom-input-check {
+  background-image: url("../images/tick-checkbox.svg");
+}
+
+.control-input-check[type="radio"] + .custom-input-check {
+  border-radius: 50%;
+}
+
+.control-input-check[type="radio"]:checked + .custom-input-check::after {
+  content: "";
+  background-color: #3f5e72;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-input-check {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
 .control-range {
   opacity: 0.3;
   color: #000000;
@@ -929,7 +990,7 @@ body {
   border: 2px solid #000000;
 }
 
-.card-position-button:focus {
+.card-position-button:focus-visible {
   border: 2px solid #68a2ca;
   outline: none;
 }
@@ -1089,7 +1150,7 @@ body {
 }
 
 .pagination-item-hover:hover,
-.pagination-item-hover:focus {
+.pagination-item-hover:focus-visible {
   background-color: #68a2ca;
   border: 1px solid #82b3d3;
   box-sizing: border-box;
