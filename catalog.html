@@ -53,8 +53,8 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control control-label">
-                    <input class="control-input-check" type="checkbox" name="Pool" checked>
-                    <span class="custom-input-check"></span>
+                      <input class="control-input-check" type="checkbox" name="Pool" checked>
+                      <span class="custom-input-check"></span>
                     <span class="catalog-input-name">Бассейн</span>
                   </label>
                 </li>
@@ -75,7 +75,7 @@
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья:</legend>
+              <legend class="catalog-filter-title">Тип Жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control control-label">
@@ -102,16 +102,20 @@
             </fieldset>
         <fieldset class="catalog-filter-slider">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <label class="control">
+          <label class="control control-label-size">
             <span class="control-range">от</span>
-            <input class="control-input control-input-left" type="number" name="min-cost" value="0">
+            <input class="control-input control-input-left" type="number" name="min-cost" value="0" min="0" max="9000" required>
           </label>
-          <label class="control">
+          <label class="control control-label-size">
             <span class="control-range">до</span>
-            <input class="control-input control-input-right" type="number" name="max-cost" value="9000">
+            <input class="control-input control-input-right" type="number" name="max-cost" value="9000" min="0" max="9000" required>
           </label>
-          <button class="slider" type="button"></button>
-          <button class="slider" type="button"></button>
+          <div class="slider-full-size">
+            <div class="slider-range-size" style="left: 0; width: 206px;">
+              <button class="slider slider-left" type="button"><span class="visually-hidden">Изменить минимальную цену</span></button>
+              <button class="slider slider-right" type="button"><span class="visually-hidden">Изменить максимальную цену</span></button>
+            </div>
+          </div>
         </fieldset>
         <div class="button-sort-column">
           <button class="button button-blue button-filter-submit" type="submit">Применить</button>
@@ -274,6 +278,44 @@
         <span class="visually-hidden">логотип html academy</span>
       </a>
     </footer>
+    <div class="modal-container">
+      <div class="modal-window">
+        <h2 class="title-two title-modal">Поиск гостиницы в Седоне</h2>
+        <button class="close-button" type="button">
+          <svg class=close-cross width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="Vector" d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" fill="black"/>
+          </svg>
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="data" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+            <label class="date-finding">
+              <span>Дата заезда:</span>
+              <input class="date-finding-input" type="text">
+            </label>
+          </p>
+          <p class="field-group">
+            <label class="date-finding">
+              <span>Дата выезда:</span>
+              <input class="date-finding-input" type="text">
+            </label>
+          </p>
+          <p class="field-group">
+            <label class="date-finding">
+              <span>Взрослые:</span>
+              <button class="add people" type="button"></button>
+              <input class="number-people" type="number">
+              <button class="remove people" type="button"></button>
+            </label>
+          <label class="date-finding">
+            <span>Дети:</span>
+            <input class="number-people" type="number">
+          </label>
+          <p>
+          <button type="submit"><span class="visually-hidden">Найти гостиницы</span></button>
+        </form>
+      </div>
+    </div>
     </div>
   </body>
 </html>
