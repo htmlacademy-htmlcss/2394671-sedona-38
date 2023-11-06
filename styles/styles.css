@@ -1361,11 +1361,12 @@ body {
   justify-content: space-between;
 }
 
-.departure-date-label {
+.departure-date-container {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
 }
+
 
 .date-finding-text {
   font-size: 20px;
@@ -1373,6 +1374,7 @@ body {
   font-weight: 700;
   color: #000000;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .date-finding-input {
@@ -1390,6 +1392,15 @@ body {
   background-image: url("../images/calendar-image.svg");
   background-repeat: no-repeat;
   background-position: top 14px right 22px;
+}
+
+.date-finding-input:hover {
+  background-color: #e6e6e6;
+}
+
+.date-finding-input:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .warning-text {
@@ -1410,10 +1421,10 @@ body {
   background-color: #f2f2f2;
 }
 
+
 .tooltip {
   vertical-align: center;
   position: absolute;
-  margin-left: 10px;
   width: 26px;
   height: 26px;
 }
@@ -1466,20 +1477,22 @@ body {
   transform: translateX(-50%);
 }
 
-.how-many-people {
+.how-many-people-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
+.tooltip-wrapper {
+  margin-top: 12px;
+}
+
 .date-finding-text-children {
-  margin-right: 26px;
-  position: relative;
-  display: inline;
+  margin-right: 10px;
 }
 
 .how-many-people-container {
   display: flex;
-  margin-left: 5px;
+  margin-left: 26px;
 }
 
 .number-people {
@@ -1512,6 +1525,7 @@ body {
   width: 40px;
   height: 48px;
   border: none;
+  position: relative;
 }
 
 .remove-people {
@@ -1521,6 +1535,34 @@ body {
 
 .remove-people:hover .remove-people-svg {
   fill: #000000;
+}
+
+.remove-people:active .remove-people-svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.how-people-button-svg:focus-visible::after {
+  display: block;
+}
+
+.how-people-button-svg:focus-visible {
+  outline: none;
+}
+
+.how-people-button-svg:focus-visible .remove-people-svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.how-people-button-svg:focus-visible .add-people-svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.add-people:hover .add-people-svg {
+  fill: #000000;
+}
+
+.add-people:active .add-people-svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .add-people {
@@ -1534,7 +1576,23 @@ body {
   fill: rgba(117, 97, 87, 0.3);
 }
 
+.how-people-button-svg::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -47%);
+  box-sizing: border-box;
+  display: none;
+}
+
 .add-people-svg {
   text-align: center;
   vertical-align: middle;
+  fill: rgba(117, 97, 87, 0.3);
 }
