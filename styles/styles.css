@@ -1397,13 +1397,75 @@ body {
   background-color: #f2f2f2;
 }
 
+.tooltip {
+  vertical-align: center;
+  position: absolute;
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  background-color: #83b3d3;
+  background-image: url("../images/tooltip-toggle-svg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tooltip-text {
+  font-size: 16px;
+  line-height: 20px;
+  width: 256px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 15px 20px 18px 20px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 18px;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  content: "";
+  background-image: url("../images/triangle-tooltip.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .how-many-people {
   display: flex;
   justify-content: space-between;
 }
 
+.date-finding-text-children {
+  margin-right: 26px;
+  position: relative;
+  display: inline;
+}
+
 .how-many-people-container {
   display: flex;
+  margin-left: 5px;
 }
 
 .number-people {
