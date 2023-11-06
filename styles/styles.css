@@ -1335,6 +1335,19 @@ body {
   right: 52px;
 }
 
+.close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
 .data-settlement {
   display: grid;
   grid-template-columns: 248px 241px;
@@ -1415,6 +1428,7 @@ body {
   background-image: url("../images/tooltip-toggle-svg.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .tooltip-text {
@@ -1502,15 +1516,22 @@ body {
 
 .remove-people {
   border-radius: 4px 0 0 4px;
+  cursor: pointer;
+}
+
+.remove-people:hover .remove-people-svg {
+  fill: #000000;
 }
 
 .add-people {
   border-radius: 0 4px 4px 0;
+  cursor: pointer;
 }
 
 .remove-people-svg {
   text-align: center;
   vertical-align: middle;
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .add-people-svg {
