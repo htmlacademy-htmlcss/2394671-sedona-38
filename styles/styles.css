@@ -39,6 +39,10 @@ body {
   margin-right: 29px;
 }
 
+.image-size {
+  max-width: 100%;
+}
+
 .logo img {
   position: relative;
   margin-bottom: -10px;
@@ -101,6 +105,19 @@ body {
   padding: 22px 12px;
   background-position: center;
   margin: 0;
+  cursor: pointer;
+}
+
+.button-nav-user:hover {
+  opacity: 0.7;
+}
+
+.button-nav-user:focus-visible {
+  opacity: 0.6;
+}
+
+.button-nav-user:active {
+  opacity: 0.3;
 }
 
 .button-favorite {
@@ -123,6 +140,18 @@ body {
 
 .navigation-list-item {
   padding: 0 16px;
+}
+
+.navigation-list-item a:hover {
+  color: #82b3d3;
+}
+
+.navigation-list-item a:focus-visible {
+  color: #82b3d3;
+}
+
+.navigation-list-item a:active {
+  color: rgba(130, 179, 211, 0.3);
 }
 
 .active-navigation-link {
@@ -315,15 +344,15 @@ body {
 }
 
 .advantages h2 {
-  width: 620px;
   margin: 0;
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 700px;
 }
 
 .advantages .subtitle-two {
-  width: 651px;
+  max-width: 731px;
   margin: 0;
   margin-bottom: 90px;
   margin-left: auto;
@@ -474,7 +503,7 @@ body {
 }
 
 .advantages-comfort .title-two {
-  width: 505px;
+  max-width: 585px;
   margin: 0;
   margin-right: auto;
   margin-left: auto;
@@ -482,7 +511,7 @@ body {
 }
 
 .advantages-comfort .subtitle-two {
-  width: 490px;
+  max-width: 570px;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -551,7 +580,7 @@ body {
 
 .search .title-two {
   margin: 0;
-  width: 297px;
+  max-width: 377px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -593,14 +622,14 @@ body {
 .subscribe .title-two {
   color: #ffffff;
   margin: 0;
-  width: 404px;
+  max-width: 484px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
 }
 
 .subscribe .subtitle-two {
-  width: 475px;
+  max-width: 535px;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -866,8 +895,10 @@ body {
   border: none;
   box-sizing: border-box;
   padding: 12px 20px;
+  padding-right: 40px;
   width: 143px;
   margin: 0;
+  -moz-appearance: textfield;
 }
 
 .control-input::-webkit-inner-spin-button {
@@ -891,6 +922,7 @@ body {
 
 .control-input-right {
   border-radius: 0 4px 4px 0;
+  padding-right: 50px;
 }
 
 .control {
@@ -964,6 +996,10 @@ body {
   position: absolute;
   right: 20px;
   top: 14px;
+}
+
+.control-range-size-left {
+  right: 22px;
 }
 
 .slider-full-size {
@@ -1061,18 +1097,17 @@ body {
   display: flex;
 }
 
-.hostel-quantity {
-  align-self: center;
-}
-
 .position-list {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
   align-items: center;
-  column-gap: 8px;
+  gap: 8px;
   margin-left: 70px;
+  max-width: 272px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .card-position-button {
@@ -1160,6 +1195,15 @@ body {
   color: #000000;
   margin: 0;
   margin-bottom: auto;
+  display: inline;
+}
+
+.hotel-item-link:hover .hotel-item-title {
+  color: #82b3d3;
+}
+
+.hotel-item-link:focus-visible .hotel-item-title {
+  color: #82b3d3;
 }
 
 .hotel-item-link {
@@ -1230,7 +1274,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  column-gap: 8px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .pagination-link {
@@ -1301,7 +1346,7 @@ body {
 }
 
 .modal-container-disabled {
-  /* display: none; */
+  display: none;
 }
 
 .modal-window {
@@ -1345,7 +1390,7 @@ body {
   background-color: #e6e6e6;
 }
 
-.close-button:active {
+.close-button:active .close-cross {
   opacity: 0.3;
 }
 
@@ -1390,10 +1435,11 @@ body {
   border: none;
   height: 48px;
   padding-left: 20px;
+  padding-right: 52px;
   box-sizing: border-box;
   background-image: url("../images/calendar-image.svg");
   background-repeat: no-repeat;
-  background-position: top 14px right 22px;
+  background-position: top 14px right 20px;
 }
 
 .date-finding-input:hover {
@@ -1447,9 +1493,10 @@ body {
   font-size: 16px;
   line-height: 20px;
   width: 256px;
+  min-height: 143px;
   font-weight: 400;
   box-sizing: border-box;
-  padding: 15px 20px 18px 20px;
+  padding: 19px 18px 18px 22px;
   color: #ffffff;
   background-color: #333333;
   border-radius: 10px;
@@ -1458,7 +1505,7 @@ body {
   top: 100%;
   right: 50%;
   transform: translateX(50%);
-  margin-top: 18px;
+  margin-top: 15px;
   display: none;
 }
 
@@ -1514,6 +1561,8 @@ body {
 
 .modal-submit {
   width: 577px;
+  font-size: 20px;
+  line-height: 24px;
   margin-top: 25px;
   min-height: 60px;
   background-color: #83b3d3;
