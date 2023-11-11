@@ -71,6 +71,8 @@ body {
   margin-left: 10px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .navigation-user-item {
@@ -272,6 +274,8 @@ body {
   text-align: center;
   border-radius: 4px;
   margin-top: 14px;
+  margin-bottom: 14px;
+  display: block;
 }
 
 .button-search-size {
@@ -279,6 +283,7 @@ body {
   text-align: center;
   padding: 8px 10px;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .button-subscribe-size {
@@ -477,13 +482,12 @@ body {
   min-height: 385px;
 }
 
-.advantages-recreation-item:first-child,
-.advantages-recreation-item:last-child {
+.advantages-recreation-item-image-card {
   display: flex;
   width: 1200px;
 }
 
-.advantages-recreation-item-order img {
+.advantages-recreation-item-order {
   order: -1;
 }
 
@@ -526,6 +530,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .advantages-comfort-item {
@@ -581,7 +586,8 @@ body {
 }
 
 .search {
-  padding: 96px 0;
+  padding-top: 96px;
+  padding-bottom: 86px;
 }
 
 .search .title-two {
@@ -616,7 +622,7 @@ body {
   background-color: #96abb9;
   color: #ffffff;
   padding-top: 96px;
-  padding-bottom: 105px;
+  padding-bottom: 90px;
 }
 
 .subscribe-main {
@@ -645,6 +651,7 @@ body {
 .subscribe-form {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .input-subscribe-size {
@@ -1311,7 +1318,7 @@ body {
   background-color: #82b3d3;
   display: inline-block;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   text-align: center;
   padding: 10px 5px;
   border: 1px solid transparent;
