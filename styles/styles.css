@@ -47,6 +47,7 @@ body {
 .logo img {
   position: relative;
   margin-bottom: -10px;
+  object-fit: contain;
 }
 
 .main-navigation {
@@ -724,6 +725,7 @@ body {
   margin-bottom: 5px;
   padding: 0 20px;
   box-sizing: border-box;
+  min-width: 720px;
 }
 
 .address-footer a {
@@ -741,9 +743,17 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.logo-footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .logo-footer {
   display: flex;
   align-items: center;
+  margin-bottom: 7px;
+  margin-top: 5px;
 }
 
 .logo-footer-academy {
@@ -767,7 +777,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 58px 70px;
 }
 
 .filter h1 {
@@ -785,6 +795,7 @@ body {
   margin: 0;
   align-items: center;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-main-image {
@@ -860,6 +871,7 @@ body {
 
 .sort-form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-filter-group {
@@ -868,6 +880,7 @@ body {
   padding: 0;
   margin: 0;
   margin-right: 70px;
+  margin-bottom: 15px;
 }
 
 .catalog-filter-title {
@@ -900,8 +913,10 @@ body {
   padding: 0;
   margin: 0;
   border: none;
+  min-width: 288px;
   width: 288px;
-  margin-left: auto;
+  margin-bottom: 15px;
+  margin-left: 71px;
 }
 
 .control-input {
@@ -1038,6 +1053,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   max-width: 267px;
+  margin-top: 1px;
 }
 
 .slider {
@@ -1119,11 +1135,13 @@ body {
 .header-hotel {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .hostel-info .title-two {
-  margin-top: 6px;
   max-width: 500px;
+  margin-right: 20px;
+  min-width: 338px;
 }
 
 
