@@ -40,9 +40,6 @@ body {
   min-width: 140px;
 }
 
-.image-size {
-  max-width: 100%;
-}
 
 .logo img {
   position: relative;
@@ -297,6 +294,11 @@ body {
   min-height: 52px;
 }
 
+.button-subscribe-size:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+}
+
 .button-filter-submit {
   width: 191px;
   padding: 8px 10px;
@@ -306,11 +308,23 @@ body {
   margin-bottom: 32px;
 }
 
+.button-filter-submit:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  cursor: default;
+}
+
 .button-filter-reset {
   width: 191px;
   padding: 8px 10px;
   border-radius: 4px;
   margin: 0;
+}
+
+.button-filter-reset:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+  cursor: default;
 }
 
 .button-more-size {
@@ -668,6 +682,18 @@ body {
   box-sizing: border-box;
 }
 
+.input-subscribe-size:hover {
+  background-color: #e6e6e6;
+}
+
+.input-subscribe-size:focus-visible {
+  background-color: #e6e6e6;
+}
+
+.input-subscribe-size:disabled {
+  background-color: #e5e5e5;
+}
+
 .main-footer {
   padding: 0 70px;
   display: flex;
@@ -942,6 +968,10 @@ body {
   outline: 2px solid #83b3d3;
 }
 
+.control-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .button-sort-column {
   display: block;
   width: 191px;
@@ -1094,6 +1124,7 @@ body {
 
 .sorting {
   font-family: "PT Sans", sans-serif;
+  color: #333333;
   font-size: 18px;
   line-height: 21px;
   padding-left: 19px;
@@ -1502,6 +1533,10 @@ body {
   outline: 3px solid #83b3d3;
 }
 
+.date-finding-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .warning-text {
   font-size: 16px;
   line-height: 21px;
@@ -1609,6 +1644,10 @@ body {
 
 .number-people::-webkit-inner-spin-button {
   appearance: none;
+}
+
+.number-people:disabled {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-submit {
